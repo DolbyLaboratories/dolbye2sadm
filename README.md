@@ -1,9 +1,9 @@
 # dolbye2sadm
 
-The purpose of this tool is to convert a packed Dolby E file (.dde) to Serialized ADM as per the new Dolby E S-ADM profile specified by Tim McNamara. To obtain a packed Dolby E file (.dde) from a WAV file, first use the frame337 tool 
+The purpose of this tool is to convert a packed Dolby E file (.dde) to Serialized ADM as per the new Dolby E S-ADM profile. To obtain a packed Dolby E file (.dde) from a WAV file, first use the frame337 tool 
 https://github.com/DolbyLaboratories/frame337.
 
-For more information about the Dolby E S-ADM profile see https://confluence.dolby.net/kb/x/c5xcHw
+For more information about the Dolby E S-ADM profile see [Dolby-E-ADM-and-S-ADM-Profile-for-emission](https://professionalsupport.dolby.com/s/article/Dolby-E-ADM-and-S-ADM-Profile-for-emission)
 
 ## Prerequisites
 
