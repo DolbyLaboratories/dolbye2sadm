@@ -1,0 +1,7 @@
+[requires]
+xerces-c/3.2.5
+boost/1.85.0
+
+[generators]
+CMakeDeps
+CMakeToolchain

@@ -1,0 +1,55 @@
+  <audioFormatExtended version="ITU-R_BS.2076-3">
+    <profileList>
+      <profile profileName="Dolby E ADM and S-ADM Profile for emission" profileVersion="1" profileLevel="1">Dolby E ADM and S-ADM Profile for emission</profile>
+      <profile profileLevel="1" profileName="Advanced sound system: ADM and S-ADM profile for emission" profileVersion="1">ITU-R BS.2168</profile>
+    </profileList> 
+    <audioProgramme audioProgrammeID="APR_1001" audioProgrammeName="Dolby E Programme-1 5.1" audioProgrammeLanguage="und">
+      <audioContentIDRef>ACO_1001</audioContentIDRef>
+      <loudnessMetadata>
+        <!-- Shall be set to the value calculated during file processing of Dolby E programme 1 -->
+        <dialogueLoudness>-1</dialogueLoudness>
+      </loudnessMetadata>
+    </audioProgramme>
+    <audioContent audioContentID="ACO_1001" audioContentName="Dolby E Programme-1 5.1" audioContentLanguage="und">
+      <audioObjectIDRef>AO_1001</audioObjectIDRef>
+      <dialogue mixedContentKind="2">2</dialogue>
+      <loudnessMetadata>
+        <!-- Shall be set to the value calculated during file processing of Dolby E programme 1 -->
+        <dialogueLoudness>-1</dialogueLoudness>
+      </loudnessMetadata>
+    </audioContent>
+    <audioObject audioObjectID="AO_1001" audioObjectName="5.1">
+      <audioPackFormatIDRef>AP_00010003</audioPackFormatIDRef>
+      <audioTrackUIDRef>ATU_00000001</audioTrackUIDRef>
+      <audioTrackUIDRef>ATU_00000002</audioTrackUIDRef>
+      <audioTrackUIDRef>ATU_00000003</audioTrackUIDRef>
+      <audioTrackUIDRef>ATU_00000004</audioTrackUIDRef>
+      <audioTrackUIDRef>ATU_00000005</audioTrackUIDRef>
+      <audioTrackUIDRef>ATU_00000006</audioTrackUIDRef>
+    </audioObject> 
+    <audioTrackUID UID="ATU_00000001">
+      <audioChannelFormatIDRef>AC_00010001</audioChannelFormatIDRef>
+      <audioPackFormatIDRef>AP_00010003</audioPackFormatIDRef>
+    </audioTrackUID>
+    <audioTrackUID UID="ATU_00000002">
+      <audioChannelFormatIDRef>AC_00010002</audioChannelFormatIDRef>
+      <audioPackFormatIDRef>AP_00010003</audioPackFormatIDRef>
+    </audioTrackUID>
+    <audioTrackUID UID="ATU_00000003">
+      <audioChannelFormatIDRef>AC_00010003</audioChannelFormatIDRef>
+      <audioPackFormatIDRef>AP_00010003</audioPackFormatIDRef>
+    </audioTrackUID>
+    <audioTrackUID UID="ATU_00000004">
+      <audioChannelFormatIDRef>AC_00010004</audioChannelFormatIDRef>
+      <audioPackFormatIDRef>AP_00010003</audioPackFormatIDRef>
+    </audioTrackUID>
+    <audioTrackUID UID="ATU_00000005">
+      <audioChannelFormatIDRef>AC_00010005</audioChannelFormatIDRef>
+      <audioPackFormatIDRef>AP_00010003</audioPackFormatIDRef>
+    </audioTrackUID>
+    <audioTrackUID UID="ATU_00000006">
+      <audioChannelFormatIDRef>AC_00010006</audioChannelFormatIDRef>
+      <audioPackFormatIDRef>AP_00010003</audioPackFormatIDRef>
+    </audioTrackUID>
+  </audioFormatExtended>
+  

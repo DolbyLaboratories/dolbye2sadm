@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame version="ITU-R_BS.2125-1">
+  <frameHeader>
+    <!-- if the format of the duration attribute in element frameFormat is fractional time and the number of samples is a non integer -->
+	<!-- as it will be for NTSC then the sequence of duration values must follow a repeated 5 field sequence of 1602, 1601, 1602, 1601, 1602 -->
+	<!-- See the application guide for more information -->
+    <frameFormat frameFormatID="FF_00000000001" type="full" start="00:00:00.00000S48000" duration="00:00:00.01920S48000" timeReference="local" flowID="7d21246e-1b35-466f-adf4-f90efdf0c688"></frameFormat>
+    <transportTrackFormat transportID="TP_0001" transportName="X" numIDs="8" numTracks="8">
+      <audioTrack trackID="1" formatLabel="0001" formatDefinition="PCM">
+        <audioTrackUIDRef>ATU_00000001</audioTrackUIDRef>
+      </audioTrack>
+      <audioTrack trackID="2" formatLabel="0001" formatDefinition="PCM">
+        <audioTrackUIDRef>ATU_00000002</audioTrackUIDRef>
+      </audioTrack>
+      <audioTrack trackID="3" formatLabel="0001" formatDefinition="PCM">
+        <audioTrackUIDRef>ATU_00000003</audioTrackUIDRef>
+      </audioTrack>
+      <audioTrack trackID="4" formatLabel="0001" formatDefinition="PCM">
+        <audioTrackUIDRef>ATU_00000004</audioTrackUIDRef>
+      </audioTrack>
+      <audioTrack trackID="5" formatLabel="0001" formatDefinition="PCM">
+        <audioTrackUIDRef>ATU_00000005</audioTrackUIDRef>
+      </audioTrack>
+      <audioTrack trackID="6" formatLabel="0001" formatDefinition="PCM">
+        <audioTrackUIDRef>ATU_00000006</audioTrackUIDRef>
+      </audioTrack>
+      <audioTrack trackID="7" formatLabel="0001" formatDefinition="PCM">
+        <audioTrackUIDRef>ATU_00000007</audioTrackUIDRef>
+      </audioTrack>
+      <audioTrack trackID="8" formatLabel="0001" formatDefinition="PCM">
+        <audioTrackUIDRef>ATU_00000008</audioTrackUIDRef>
+      </audioTrack>
+    </transportTrackFormat>
+    <profileList>
+      <profile profileName="Dolby E ADM and S-ADM Profile for emission" profileVersion="1" profileLevel="1">Dolby E ADM and S-ADM Profile for emission</profile>
+      <profile profileLevel="1" profileName="Advanced sound system: ADM and S-ADM profile for emission" profileVersion="1">ITU-R BS.2168</profile>
+    </profileList>
+  </frameHeader>
+  <audioFormatCustom>
+    <audioFormatCustomSet audioFormatCustomSetID="AFC_1001" audioFormatCustomSetName="DolbyE DBMD Chunk" audioFormatCustomSetType="CUSTOM_SET_TYPE_DOLBYE_DBMD_CHUNK" audioFormatCustomSetVersion="1.0.0">
+      <!-- dbmd goes here -->
+    </audioFormatCustomSet>
+  </audioFormatCustom>
+  <!-- audioFormatExtended goes here -->
+</frame>

@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="dbmd">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="metadataSegment">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:choice>
+								<!--******************* Encoder Control *******************-->
+								<xs:element minOccurs="1" maxOccurs="4" name="encodeParameters">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element minOccurs="1" maxOccurs="1" name="hpFOn" type="ZeroOrOne" />
+											<xs:element minOccurs="1" maxOccurs="1" name="bwLpFOn" type="ZeroOrOne" />
+											<xs:element minOccurs="1" maxOccurs="1" name="lfeLpFOn" type="ZeroOrOne" />
+											<xs:element minOccurs="1" maxOccurs="1" name="sur90On" type="ZeroOrOne" />
+											<xs:element minOccurs="1" maxOccurs="1" name="surAttOn" type="ZeroOrOne" />
+											<xs:element minOccurs="1" maxOccurs="1" name="rfPremphOn" type="ZeroOrOne" />
+										</xs:sequence>
+										<xs:attribute name="ID" type="ValidAC3ProgramID" use="required" />
+									</xs:complexType>
+								</xs:element>
+								<!--******************** Dolby Digital ********************-->
+								<xs:element minOccurs="1" maxOccurs="4" name="ac3Program">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="programInfo">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element minOccurs="1" maxOccurs="1" name="acMod" type="ValidAC3Acmod" />
+														<xs:element minOccurs="1" maxOccurs="1" name="bsMod" type="ValidAC3Bsid" />
+														<xs:element minOccurs="1" maxOccurs="1" name="lfeOn" type="ZeroOrOne" />
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element minOccurs="1" maxOccurs="1" name="cMixLev" type="ValidAC3SurroundConfig" />
+											<xs:element minOccurs="1" maxOccurs="1" name="surMixLev" type="ValidAC3SurroundConfig" />
+											<xs:element minOccurs="1" maxOccurs="1" name="dSurMod" type="ValidAC3SurroundConfig" />
+											<xs:element name="dialNorm" type="ValidAC3DialNorm" />
+											<xs:element minOccurs="1" maxOccurs="1" name="copyRightB" type="ZeroOrOne" />
+											<xs:element minOccurs="1" maxOccurs="1" name="origBs" type="ZeroOrOne" />
+											<xs:element minOccurs="1" maxOccurs="1" name="langCode">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="langCod" type="ValidAC3langCod" />
+													</xs:sequence>											
+													<xs:attribute name="exists" type="ZeroOrOne" use="required" />
+												</xs:complexType>
+											</xs:element>
+
+											<xs:element minOccurs="1" maxOccurs="1" name="audioProdInfo">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="mixLevel" type="ValidAC3DialNorm" />
+														<xs:element name="roomTyp" type="ValidAC3SurroundConfig" />
+													</xs:sequence>
+													<xs:attribute name="exists" type="ZeroOrOne" use="required" />
+												</xs:complexType>
+											</xs:element>
+											<xs:element minOccurs="1" maxOccurs="1" name="extBsi1e">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="loRoCMixLev" type="ValidAC3Bsid" />
+														<xs:element name="loRoSurMixLev" type="ValidAC3Bsid" />
+														<xs:element name="ltRtCMixLev" type="ValidAC3Bsid" />
+														<xs:element name="ltRtSurMixLev" type="ValidAC3Bsid" />
+														<xs:element name="dMixMod" type="ValidAC3SurroundConfig" />
+													</xs:sequence>
+													<xs:attribute name="exists" type="ZeroOrOne" use="required" />
+												</xs:complexType>
+											</xs:element>
+											<xs:element minOccurs="1" maxOccurs="1" name="extBsi2e">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="dSurExMod" type="ValidAC3SurroundConfig" />
+														<xs:element name="dHeadPhonMod" type="ValidAC3SurroundConfig" />
+														<xs:element name="adConvTyp" type="ZeroOrOne" />
+													</xs:sequence>
+													<xs:attribute name="exists" type="ZeroOrOne" use="required" />
+												</xs:complexType>
+											</xs:element>
+											<xs:element minOccurs="1" maxOccurs="1" name="compr1">
+												<xs:complexType>
+													<xs:simpleContent>
+														<xs:extension base="ValidAC3Drc">
+															<xs:attribute name="exists" type="ZeroOrOne" use="required" />
+														</xs:extension>
+													</xs:simpleContent>
+												</xs:complexType>
+											</xs:element>
+											<xs:element minOccurs="1" maxOccurs="1" name="dynRng1">
+												<xs:complexType>
+													<xs:simpleContent>
+														<xs:extension base="ValidAC3Drc">
+															<xs:attribute name="exists" type="ZeroOrOne" use="required" />
+														</xs:extension>
+													</xs:simpleContent>
+												</xs:complexType>
+											</xs:element>
+											<xs:element minOccurs="0" maxOccurs="1" name="programDescriptionText">
+												<xs:simpleType>
+	    											<xs:restriction base="xs:string">
+	      												<xs:maxLength value="32" />
+	    											</xs:restriction>
+	  											</xs:simpleType>
+	  										</xs:element>
+										</xs:sequence>
+										<xs:attribute name="ID" type="ValidAC3ProgramID" use="required" />
+									</xs:complexType>
+								</xs:element>
+								<!--******************** Dolby E ********************-->
+								<xs:element minOccurs="1" maxOccurs="1" name="dolbyE">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element minOccurs="1" maxOccurs="1" name="programConfig" type="ValidDolbyEProgramConfig" />
+											<xs:element minOccurs="1" maxOccurs="1" name="frameRateCode" type="ValidDolbyEFrameRate" />
+											<xs:element minOccurs="0" maxOccurs="1" name="smpteTimeCode" type="xs:string" />
+										</xs:sequence>
+										<xs:attribute name="ID" type="ValidDolbyEID" use="required" />
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+						</xs:sequence>
+						<xs:attribute name="ID" type="ValidMetadataSegmentID" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!--******************* Global *******************-->
+	<xs:simpleType name="ValidMetadataSegmentID">
+		<xs:restriction base="xs:unsignedByte">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="11"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ZeroOrOne">
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--**********************************************-->
+	
+	
+	<!--****************** Dolby E *******************-->
+	<xs:simpleType name="ValidDolbyEProgramConfig">
+		<xs:restriction base="xs:unsignedByte">
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="6"/>
+			<xs:enumeration value="11"/>
+			<xs:enumeration value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ValidDolbyEFrameRate">
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ValidDolbyEID">
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--**********************************************-->
+
+	
+	<!--*************** AC-3 Programme ***************-->
+	<xs:simpleType name="ValidAC3ProgramID">
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="7"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ValidAC3Bsid">
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="7"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ValidAC3Acmod">
+		<xs:restriction base="xs:unsignedByte">
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="7"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ValidAC3Drc">
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ValidAC3DialNorm">
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="31"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ValidAC3SurroundConfig">
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ValidAC3langCod">
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="127"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--**********************************************-->
+
+	
+</xs:schema>
